@@ -1,0 +1,20 @@
+{
+  "name": "react-twitter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devonhackley/react-twitter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devonhackley/react-twitter/issues"
+  },
+  "homepage": "https://github.com/devonhackley/react-twitter#readme"
+}
