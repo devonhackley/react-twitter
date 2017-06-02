@@ -1,7 +1,6 @@
 'use strict';
 
 const express = require('express');
-const Oath = require('oauth');
 const cors = require('cors');
 const Twitter = require('twitter');
 const PORT = process.env.PORT || 3000;
