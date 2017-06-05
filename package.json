@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,14 @@
     "dotenv": "^4.0.0",
     "eslint-loader": "^1.7.1",
     "express": "^4.15.3",
+    "express-session": "^1.15.3",
     "extract-text-webpack-plugin": "^2.1.0",
+    "mongoose": "^4.10.4",
     "node-sass": "^4.5.3",
     "node-twitter-api": "^1.8.0",
     "oauth": "^0.9.15",
+    "passport": "^0.3.2",
+    "passport-twitter": "^1.0.4",
     "path": "^0.12.7",
     "preact": "^8.1.0",
     "preact-compat": "^3.16.0",

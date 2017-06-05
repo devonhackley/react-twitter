@@ -1,10 +1,10 @@
 'use strict';
-const User = require('../model/user');
-const
-module.exports = function(router,passport){
-  router.get('/auth', passport.authenticate('twitter'));
+const User = require('../model/user/user.js');
 
-  router.get('/auth/twitter', passport.authenticate('twitter', {
+module.exports = function(router,passport){
+  router.get('/login/twitter', passport.authenticate('twitter'));
+
+  router.get('/login/twitter/return', passport.authenticate('twitter', {
     successRedirect: '/dashboard',
     failureRedirect: '/'
   }));
