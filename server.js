@@ -2,21 +2,23 @@
 
 const express = require('express');
 const cors = require('cors');
-const Twitter = require('twitter');
+const twitConfig = require('./config.js');
+const passport = require('passport');
+const session = require('express-session');
+const router = express.Router();
 const PORT = process.env.PORT || 3000;
 
 
 const app = express();
-const client = new Twitter({
-  consumer_key:process.env.TWITTER_CONSUMER_KEY,
-  consumer_secret:process.env.TWITTER_CONSUMER_SECRET,
-  access_token_key:process.env.TWITTER_ACCESS_TOKEN_KEY,
-  access_token_secret:process.env.TWITTER_ACCESS_TOKEN_SECRET
-});
+
+
+
 
 app.use(cors());
 app.use(express.static(`${__dirname}/../build`));
-app.get('*', (req,res) => res.redirect('/'))
+
+require('./routes/routes.js')(router);
+app.use(router);
 app.use((err,req,res,next) => {
   console.err(err.message);
   if(err.status){
@@ -25,6 +27,8 @@ app.use((err,req,res,next) => {
   res.sendStatus(500);
   next();
 });
+
+app.get('*', (req,res) => res.redirect('/'));
 
 app.listen(PORT, () => {
   console.log('Server is running on port: ', PORT)
