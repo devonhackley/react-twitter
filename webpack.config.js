@@ -9,7 +9,7 @@ const ExtractText = require('extract-text-webpack-plugin');
 
 module.exports = {
   devtool: 'eval',
-  entry:`${__dirname}/app/js/entry.js`,
+  entry:`${__dirname}/app/entry.js`,
   output: {
     path: `${__dirname}/build` ,
     filename: 'bundle-[hash].js',

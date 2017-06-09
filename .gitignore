@@ -4,6 +4,7 @@
 build
 node_modules
 .env
+db
 
 
 # Created by https://www.gitignore.io/api/osx,node,linux,windows
